@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
 export default function NotificationList() {
-  const [data, setData] = useState([]);
+  const [notifications, setNotifications] = useState([]);
 
   return (
     <>
       <button
         className="button"
-        onClick={() => setData(["New Notification", "Another Notification"])}
+        onClick={() => setNotifications(["New Notification"])}
       >
         Refresh Notifications
       </button>
 
       <section className="notificationsList">
-        {data.map((item, i) => (
-          <div key={i}>{item}</div>
+        {notifications.map((n, i) => (
+          <div key={i}>{n}</div>
         ))}
       </section>
     </>
